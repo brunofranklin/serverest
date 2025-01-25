@@ -1,3 +1,4 @@
+import CheckoutPage from '../../support/pages/CheckoutPage';
 import RegisterPage from '../../support/pages/RegisterPage';
 
 describe('Test Login Page', () => {
@@ -22,6 +23,21 @@ describe('Test Login Page', () => {
         RegisterPage.submitRegistration();
         RegisterPage.verifyRegistrationSuccess();
       });
+
+      it('Test checkout with the first product in the listing', () => {
+        const name = RegisterPage.generateName();
+        const email = RegisterPage.generateEmail();
+        const password = RegisterPage.generatePassword();
+    
+        RegisterPage.visit();
+        RegisterPage.fillRegistrationForm(name, email, password);
+        RegisterPage.submitRegistration();
+        RegisterPage.verifyRegistrationSuccess();
+        CheckoutPage.GetFirstproduct() //select the first product from the list
+        CheckoutPage.addToList();
+        CheckoutPage.addToCart();
+      });
+
 
 
   });
