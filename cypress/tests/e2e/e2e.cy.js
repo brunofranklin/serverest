@@ -38,6 +38,19 @@ describe('Test Login Page', () => {
         CheckoutPage.addToCart();
       });
 
+      it.only('test logout button after registering a new user', () => {
+        const name = RegisterPage.generateName();
+        const email = RegisterPage.generateEmail();
+        const password = RegisterPage.generatePassword();
+    
+        RegisterPage.visit();
+        RegisterPage.fillRegistrationForm(name, email, password);
+        RegisterPage.submitRegistration();
+        RegisterPage.verifyRegistrationSuccess();
+        cy.get('[data-testid="logout"]').click();
+        cy.get('h1.font-robot').should('contain', 'Login');
+      });
+
 
 
   });
