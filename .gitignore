@@ -128,3 +128,21 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Node modules
+/node_modules/
+
+# Cypress files
+/cypress/videos/
+/cypress/screenshots/
+/cypress/reports/
+/cypress/fixtures/
+/cypress/integration/
+/cypress/support/
+
+# Local environment configuration file
+.cypress.env.json
+
+# Local environment dependencies
+/package-lock.json
+
