@@ -138,7 +138,7 @@ dist
 /cypress/reports/
 /cypress/fixtures/
 /cypress/integration/
-/cypress/support/
+
 
 # Local environment configuration file
 .cypress.env.json
