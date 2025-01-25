@@ -38,7 +38,7 @@ describe('Test Login Page', () => {
         CheckoutPage.addToCart();
       });
 
-      it.only('test logout button after registering a new user', () => {
+      it('test logout button after registering a new user', () => {
         const name = RegisterPage.generateName();
         const email = RegisterPage.generateEmail();
         const password = RegisterPage.generatePassword();
